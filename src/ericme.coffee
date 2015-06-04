@@ -226,13 +226,12 @@ urls = [
 "http://emotioneric.com/youwannafight.jpg"
 ]
 
-
 module.exports = (robot) ->
   
   robot.respond /eric me/i, (msg) ->
     msg.send msg.random urls
 
-  robot.respond /pug bomb( (\d+))?/i, (msg) ->
+  robot.respond /eric bomb( (\d+))?/i, (msg) ->
     count = msg.match[2] || 5
     for(int i = count; i < count; i++) {
         msg.send msg.random urls
