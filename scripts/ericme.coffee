@@ -8,8 +8,8 @@
 #   None
 #
 # Commands:
-#   hubot eric me - Receive an eric picture
-#   hubot eric bomb N - get N pugs
+#   [hubot-name] eric me - Receive an eric picture
+#   [hubot-name] eric bomb N - get N pugs
 
 urls = [
 	"http://emotioneric.com/happy.jpg",
@@ -205,8 +205,6 @@ module.exports = (robot) ->
   robot.respond /eric me/i, (msg) ->
     msg.send msg.random urls
 
-  #robot.respond /eric bomb( (\d+))?/i, (msg) ->
-  #  count = msg.match[2] || 5
-  #  for(int i = count; i < count; i++) {
-  #      msg.send msg.random urls
-  #  }   
+  robot.respond /eric bomb( (\d+))?/i, (msg) ->
+    count = msg.match[2] || 5
+    msg.send msg.random urls for i in [0 .. count]
