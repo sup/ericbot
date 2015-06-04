@@ -1,5 +1,5 @@
 # Description:
-#   Eric dispalys emotions is the most important thing in life
+#   Eric displays emotions is the most important thing in life
 #
 # Dependencies:
 #   None
